@@ -1,5 +1,6 @@
-package ui
+package ui.views
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -26,14 +27,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import data.constant.App
-import model.ModelDoctor
-import model.type.TypeDoctor
+import data.model.ModelDoctor
+import data.model.type.TypeDoctor
 import org.succlz123.lib.imageloader.ImageRes
 import org.succlz123.lib.imageloader.core.ImageCallback
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun ViewDoctors() {
+fun ViewNurse() {
 
     var show by remember { mutableStateOf(false) }
 
