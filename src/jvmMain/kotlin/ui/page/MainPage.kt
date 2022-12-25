@@ -7,6 +7,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBox
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,6 +32,28 @@ fun MainPage(selecter: Selecter) {
     var position by remember { mutableStateOf(0) }
 
     MaterialTheme {
+//        Column {
+//            BottomNavigation {
+//                BottomNavigationItem (
+//                    icon = {
+//                           Icon(Icons.Filled.Person, "")
+//                    },
+//                    label = { Text("Personal") },
+//                    selected = position == 0,
+//                    onClick = { position = 0 },
+////                    selectedContentColor = selecter
+//                )
+//                BottomNavigationItem(
+//                    icon = {
+//                        Icon("", "")
+//                    },
+//                    label = { Text("Group") },
+//                    selected = position == 1,
+//                    onClick = { position = 1 },
+////                    selectedContentColor = selecter
+//                )
+//            }
+//        }
         Row (
             modifier = Modifier.fillMaxSize()
         ) {
@@ -90,7 +115,6 @@ fun MainPage(selecter: Selecter) {
                 7 -> ViewDoctors()
                 8 -> ViewDoctors()
             }
-
         }
     }
 }

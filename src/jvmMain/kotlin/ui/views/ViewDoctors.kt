@@ -192,7 +192,7 @@ fun ViewDoctors() {
                     modifier = Modifier.align(Alignment.End)
                         .padding(0.dp, 0.dp, 24.dp, 0.dp)
                 ) {
-                    Text("Book")
+                    Text("Get Appointment")
                 }
             }
         }

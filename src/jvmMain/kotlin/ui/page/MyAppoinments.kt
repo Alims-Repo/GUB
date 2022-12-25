@@ -1,10 +1,13 @@
 package ui.page
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -25,7 +28,7 @@ import data.model.type.TypeView
 import org.succlz123.lib.imageloader.ImageRes
 import org.succlz123.lib.imageloader.core.ImageCallback
 
-@OptIn(ExperimentalMaterialApi::class)
+@OptIn(ExperimentalMaterialApi::class, ExperimentalFoundationApi::class)
 @Composable
 @Preview
 fun MyAppoinments(selecter: Selecter) {
@@ -53,20 +56,21 @@ fun MyAppoinments(selecter: Selecter) {
                     }
                 )
                 Text(
-                    text = "My Bookings",
+                    text = "My Appointment",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.align(Alignment.CenterVertically)
                 )
             }
-            LazyColumn(
+            LazyVerticalGrid(
+                cells = GridCells.Fixed(2),
                 contentPadding = PaddingValues(16.dp)
             ) {
                 items(Global.bookDoc) {
                     Card(
                         modifier = Modifier.fillMaxWidth()
-                            .padding(0.dp, 0.dp, 0.dp, 8.dp)
+                            .padding(4.dp, 4.dp, 4.dp, 4.dp)
                             .height(100.dp),
                         backgroundColor = Color.White,
                         shape = RoundedCornerShape(16.dp),

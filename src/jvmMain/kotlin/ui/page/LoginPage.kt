@@ -26,8 +26,8 @@ fun LoginPage(selecter: Selecter) {
 
     var loading by remember { mutableStateOf(false) }
     var snack by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("sourab.0.alim@gmail.com") }
+    var password by remember { mutableStateOf("password") }
 
     MaterialTheme {
 
