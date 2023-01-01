@@ -3,10 +3,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import data.`interface`.Selecter
 import data.model.type.TypeView
-import ui.page.LoginPage
-import ui.page.MainPage
-import ui.page.MyAppoinments
-import ui.page.SplashPage
+import ui.page.*
 
 fun main() = application {
     var type by remember { mutableStateOf(TypeView.SPLASH) }
@@ -35,7 +32,7 @@ fun main() = application {
                 )
             }
             TypeView.MAIN -> {
-                MainPage(
+                MainPage2(
                     object : Selecter {
                         override fun select(typeView: TypeView) {
                             type = typeView
@@ -45,7 +42,44 @@ fun main() = application {
             }
 
             TypeView.BOOKING -> {
-                MyAppoinments(
+                MyAppointments(
+                    object : Selecter {
+                        override fun select(typeView: TypeView) {
+                            type = typeView
+                        }
+                    }
+                )
+            }
+            // New Attachments
+            TypeView.HOSPITAL -> {
+                HospitalPage(
+                    object : Selecter {
+                        override fun select(typeView: TypeView) {
+                            type = typeView
+                        }
+                    }
+                )
+            }
+            TypeView.DOCTOR -> {
+                DoctorPage(
+                    object : Selecter {
+                        override fun select(typeView: TypeView) {
+                            type = typeView
+                        }
+                    }
+                )
+            }
+            TypeView.REPORT -> {
+                ReportPage(
+                    object : Selecter {
+                        override fun select(typeView: TypeView) {
+                            type = typeView
+                        }
+                    }
+                )
+            }
+            TypeView.APPOINTMENTS -> {
+                MyAppointments(
                     object : Selecter {
                         override fun select(typeView: TypeView) {
                             type = typeView

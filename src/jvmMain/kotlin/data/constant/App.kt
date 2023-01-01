@@ -25,4 +25,24 @@ object App {
         it.add(ModelDoctor(TypeDoctor.INFO, "Dr. Sakib", "", "+8801881632597"))
         it.add(ModelDoctor(TypeDoctor.INFO, "Dr. Nasir", "", "+8801881632597"))
     }
+
+    val dataHospital = ArrayList<ModelDoctor>().also {
+        it.add(ModelDoctor(TypeDoctor.TITLE, "Hospital Nearby", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "Popular", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "Evercare", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "Lab Aid", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "Square", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.TITLE, "Best Ratings", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "United", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "BRB Hospital", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "Dhaka Medical College", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "Mitford Hospital", "", "+8801881632597"))
+    }
+
+    val dataReport = ArrayList<ModelDoctor>().also {
+        it.add(ModelDoctor(TypeDoctor.TITLE, "Blood Test", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "X Test", "", "Positive"))
+        it.add(ModelDoctor(TypeDoctor.TITLE, "Urine Test", "", "+8801881632597"))
+        it.add(ModelDoctor(TypeDoctor.INFO, "Y Test", "", "Negative"))
+    }
 }
